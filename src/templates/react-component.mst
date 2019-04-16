@@ -1,0 +1,27 @@
+import React from 'react';
+{{#propTypes}}
+import PropTypes from 'prop-types';
+{{/propTypes}}
+{{#styledComponents}}
+import styled from 'styled-components';
+{{/styledComponents}}
+{{#cssModule}}
+import classNames from 'classnames/bind';
+import * as styles from './{{component.hyphenSeparatedName}}.module.{{cssExtension}}';
+
+const cx = classNames.bind(styles);
+{{/cssModule}}
+
+{{#styledComponents}}
+const Wrapper = styled.div`
+`;
+
+{{/styledComponents}}
+{{#componentString}}{{/componentString}}
+
+{{#propTypes}}
+{{component.pascalCaseName}}.propTypes = {
+};
+
+{{/propTypes}}
+export default {{component.pascalCaseName}};

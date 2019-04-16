@@ -1,0 +1,18 @@
+class {{component.pascalCaseName}} extends React.Component {
+  render() {
+    {{#styledComponents}}
+    return (
+      <Wrapper>
+        Everything you can imagine is real.
+      </Wrapper>
+    );
+    {{/styledComponents}}
+    {{^styledComponents}}
+    return (
+      <div{{#cssModule}} className={cx('{{component.camelCaseName}}')}{{/cssModule}}>
+        Everything you can imagine is real.
+      </div>
+    );
+    {{/styledComponents}}
+  }
+}
