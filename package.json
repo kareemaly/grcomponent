@@ -1,9 +1,9 @@
 {
-  "name": "grcpmt",
+  "name": "grcomponent",
   "version": "1.0.0",
   "description": "Command line to generate react components",
   "main": "index.js",
-  "repository": "https://github.com/bitriddler/grcpmt",
+  "repository": "https://github.com/bitriddler/grcomponent",
   "author": "Kareem Elbahrawy <bitriddler@gmail.com>",
   "license": "MIT",
   "private": false,

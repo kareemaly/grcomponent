@@ -1,4 +1,4 @@
-grcpmt
+grcomponent
 ------
 
 Command line to quickly generate react components.
@@ -6,12 +6,12 @@ Command line to quickly generate react components.
 ## Installation
 
 ```
-npm install -g grcpmt
+npm install -g grcomponent
 ```
 
 
 ## CLI Usage
-Usage: `grcpmt [options]`
+Usage: `grcomponent [options]`
 
 Options:
 ```
