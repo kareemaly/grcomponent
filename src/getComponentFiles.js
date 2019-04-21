@@ -15,6 +15,7 @@ const defaultOptions = {
   propTypes: false,
   styledComponents: false,
   cssModule: false,
+  styleguidist: false,
   cssExtension: 'css',
   type: 'function',
 };
@@ -33,6 +34,7 @@ module.exports = async (opts) => {
     cssModule,
     cssExtension,
     type,
+    styleguidist,
   } = Object.assign({}, defaultOptions, opts);
 
   if (!componentName) {
@@ -95,6 +97,14 @@ module.exports = async (opts) => {
       extension: cssExtension,
       name: `${component.hyphenSeparatedName}.module`,
       content: Mustache.render(await readTemplateToString('css-module'), renderProps),
+    });
+  }
+
+  if (styleguidist) {
+    files.push({
+      extension: 'md',
+      name: `${component.pascalCaseName}`,
+      content: Mustache.render(await readTemplateToString('styleguidist'), renderProps),
     });
   }
 

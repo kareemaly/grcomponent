@@ -41,10 +41,12 @@ const args = require('yargs')
   .describe('proptypes', `whether to use prop-types`)
   .describe('styled', `whether to use styled-components`)
   .describe('cssmodule', `whether to use css modules`)
+  .describe('styleguidist', `will add markdown file for styleguidist`)
   .describe('cssext', `css extension to use in case of --cssmodule`)
   .boolean('proptypes')
   .boolean('styled')
   .boolean('cssmodule')
+  .boolean('styleguidist')
   .demandOption(['components', 'path'])
   .argv;
 
@@ -55,5 +57,6 @@ run({
   styledComponents: args.styled,
   cssModule: args.cssmodule,
   cssExtension: args.cssext,
+  styleguidist: args.styleguidist,
   type: args.type,
 }).catch(console.error);
