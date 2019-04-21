@@ -1,6 +1,6 @@
 {
   "name": "grcomponent",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Command line to generate react components",
   "main": "index.js",
   "repository": "https://github.com/bitriddler/grcomponent",
