@@ -3,6 +3,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const getComponentFiles = require('./getComponentFiles');
+const removeEmptyValues = require('./utils/removeEmptyValues');
 
 const run = async ({
   componentsPath,
@@ -50,7 +51,7 @@ const args = require('yargs')
   .demandOption(['components', 'path'])
   .argv;
 
-run({
+run(removeEmptyValues({
   componentsPath: args.path,
   componentNames: args.components.split(','),
   propTypes: args.proptypes,
@@ -59,4 +60,4 @@ run({
   cssExtension: args.cssext,
   styleguidist: args.styleguidist,
   type: args.type,
-}).catch(console.error);
+})).catch(console.error);
